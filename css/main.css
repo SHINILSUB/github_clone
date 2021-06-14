@@ -5,6 +5,9 @@
     font-weight: 400;
     color: #333;
 }
+a {
+    text-decoration: none;
+}
 /* button */
 .btn {
     height: 34px;
@@ -19,6 +22,7 @@
     cursor: pointer;
     box-sizing: border-box;
     position: relative;
+    color: #333;
   }
   .btn:hover::before {
     content: '';
@@ -48,4 +52,61 @@
   .input--text:focus {
     border-color: #51a7e8;
     box-shadow: inset 0 1px 2px rgba(0,0,0,0.9), 0 0 5px rgba(81,167,232,0.5)
+  }
+
+  /* float clearfix */
+  .clearfix::after {
+      content: '';
+      clear: both;
+      display: block;
+  }
+  .float--left {
+      float: left;
+  }
+  .float--right {
+      float: right;
+  }
+
+  /* header */
+  header {
+      border-bottom: 1px solid rgba(0,0,0,.7);
+      box-shadow: 0 0 5px rgba(0,0,0,0.75);
+      background: #fff;
+
+  }
+  header .inner {
+      max-width: 980px;
+      height: 78px;
+      margin: 0 auto;
+  }
+  header .menu-group {
+      height: 100%;
+      align-items: center;
+      display: flex;
+
+  }
+  header .logo {
+      margin-right: 10px;
+
+  }
+  header .logo a {
+      background: url('../img/logo.svg');
+      width: 32px;
+      height: 32px;
+      display: block;
+      text-indent: -9999px;
+  }
+  header .main-menu {
+      display: flex;
+  }
+  header .main-menu li a {
+      display: block;
+      padding: 10px;
+      color: #3c4146;
+  }
+  header .main-menu li a:hover {
+      color: #4078c0;
+  }
+  header .sign-group {
+      display: flex;
   }
