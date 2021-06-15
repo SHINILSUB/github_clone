@@ -42,10 +42,10 @@
             <a href="#">GitHub</a>
           </div>
           <ul class="main-menu">
-            <li><a href="#">personal</a></li>
-            <li><a href="#">open source</a></li>
-            <li><a href="#">business</a></li>
-            <li><a href="#">explore</a></li>            
+            <li><a href="#">개인</a></li>
+            <li><a href="#">오픈소스</a></li>
+            <li><a href="#">비즈니스</a></li>
+            <li><a href="#">탐험</a></li>            
           </ul>
         </div>
 
@@ -71,9 +71,9 @@
       <div class="inner">
 
         <div class="summary">
-          <div class="summary__title">How&nbsp;people build&nbsp;software</div>
-          <div class="summary__description">Millions of developers use GitHub to build personal projects, support their
-            businesses, and&nbsp;work together on open source technologies.</div>
+          <h2 class="summary__title">하우&nbsp;빌드 &nbsp;소프트웨어&nbsp;</h2>
+          <p class="summary__description">수백만 혹은 그 이상의 개발러들이 플젝하면서 깃헙을 쓰고 있죠, 
+            &nbsp;그들의 사업 그리고 작업을 도와주고 오픈소스 작업을 합께해요들! </p>
         </div>
 
         <form id="sign-form" method="POST" action="">
@@ -96,21 +96,86 @@
     <!-- feature -->
     <section class="section section--feature">
       <div class="summary">
-        <div class="summary__title">
+        <h2 class="summary__title">
           어서오게나 개발자들이여
-        </div>
-        <div class="summary__description">
-          깃헙은 겁나 빠르고 유연하고 아주 유연한 도구하네 친구들
-        </div>
+        </h2>
+        <p class="summary__description">
+          깃헙은 겁나 빠르고 유연하고 아주 좋은 도구라네 친구들
+        </p>
       </div>
       <div class="video">
         <div class="video-ratio">
           <iframe width="992" height="558" src="https://www.youtube.com/embed/afvT1c1ii0c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
-      <div class="tiles"></div>
+      <div class="tiles">
+        <div class="inner">
+          <ul class="clearfix">
+            <li>
+              <img src="img/feature-tile__build.png" alt="build">
+              <h3>너님들이 만드는 모든 것들</h3>
+              <p>호스팅하고 관리해보라고 너의 모든 코드를 깃헙으로. </p>
+            </li>
+            <li>
+              <img src="img/feature-tile__work.png" alt="work">
+              <h3>일하기 좋은 아주 최선의 방법</h3>
+              <p>취미코딩에서 전문가들까지 깃헙은 모든 개발러들을 도와줄게야</p>
+            </li>
+            <li>
+              <img src="img/feature-tile__projects.png" alt="projects">
+              <h3>수만가지의 프로젝트들</h3>
+              <p>깃헙은 수만가지의 오픈소스의 프로젝트가 있지 한번 체감해보라고 짜식들</p>
+            </li>
+            <li>
+              <img src="img/feature-tile__platform.png" alt="platform">
+              <h3>시작부터 끝까지의 하나의 플랫폼</h3>
+              <p>수백가지의 조미료로 깃헙은 아주 융통성 있다구 </p>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
     </section>
+
+    <!-- where -->
+    <section class="section section--where-is">
+      <div class='inner'>
+        <div class="summary">
+          <div class="summary__title">
+            깃헙은 어디있죠?
+          </div>
+          <div class="summary__description">
+            깃헙은 소프트웨어를 만드는 어느곳에나 있어용. 18만 이상 사람들이 깃헙에서 찾기위해 깃헙을 쓰지용
+          </div>
+        </div>
+        <div id="map"></div>
+      </div>
+    </section>
+
+
   </div>
+  <script>
+    function initMap() {
+      const myLatLng = {
+        lat: 37.782293,
+        lng: -122.391240
+      }
+      const map = new google.maps.map(
+        document.getElementById('map'), 
+        {
+          center: myLatLng,
+          scrollwheel: false,
+          zoom: 18
+        }
+      );
+      const marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'GitHub'
+      });
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTQIlxBn5AfKGvsfJiormAE1esN3fcCkg&callback=initMap" async defer></script>
     
 </body>
 </html>
