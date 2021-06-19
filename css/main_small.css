@@ -1,0 +1,53 @@
+/* common */
+
+.summary__title {
+    font-size: 34px !important;
+
+}
+.summary__description {
+    font-size: 22px;
+
+}
+
+/* feature */
+.section--feature .tiles li {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e5e5e5; 
+}
+
+/* where (width value 초기화)*/
+#map {
+    width: auto;
+    margin: 40px -20px 0 -20px;
+    border-left: none;
+    border-right: none;
+
+}
+
+/* pricing */
+.section--pricing .card {
+    display: block;
+
+
+}
+.section--pricing .card .cell2 {
+    border-left: none;
+    border-top: 1px solid #e5e5e5;
+
+}
+/* footer */
+footer .site-links {
+    float: none;
+    display: block;
+    text-align: center;
+
+}
+footer .site-links:first-child {
+    margin-bottom: 20px;
+}
+/* 컨텐츠가 가로정렬 된 상태를 수평으로 다시 만들기 위한 추가 작업 */
+footer .site-links li {
+    display: inline;
+
+}
